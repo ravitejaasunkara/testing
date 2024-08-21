@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Routledge and CRC Press - Discount Management System Dashboard</title>
+	<meta name="Description" content="Routledge and CRC Press Discount Management System">
+	  
+    <!-- Style sheets -->
+    <link href="https://www.routledge.com/css/bootstrap-4.0.0.css" rel="stylesheet">
+	<link href="https://www.routledge.com/css/ubw.css" rel="stylesheet">
+	<!-- Additional DMS Specific Styles -->
+	<link href="css/dms.css" rel="stylesheet">
+
+    <!-- Font Awesome plus script for FA5 kit -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/56b5410b09.js"></script>
+
+    <!-- Google web fonts -->
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+	<link href="//fonts.googleapis.com/css?family=Droid+Serif:400" rel="stylesheet">
+	  
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://www.routledge.com/js/jquery-3.2.1.min.js"></script>
+	<script src="https://www.routledge.com/js/popper.min.js"></script> 
+    <script src="https://www.routledge.com/js/bootstrap-4.0.0.js"></script>
+
+  </head>
+  <body id="top">
+	<header class="site">
+        <div id="headerlogos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8" id="eat" style="padding:3px 10px">
+                        <i class="fas fa-paw fa-2x initials align-middle mr-2"><div id="eat-logo"><span style="font-size:15px">eCAT</span></div></i>
+						<span class="d-none d-sm-inline">eCommerce</span> Admin Tool
+                    </div>
+					<!--<div class="col-4 text-right">
+						<a title="Sign Out" href="#" class="p-1 d-none d-lg-inline"><i class="fas fa-sign-out-alt fa-2x pt-3 px-1"></i></a>
+						<a href="javascript:void(0);" title="Toggle Menu" class="d-lg-none d-xl-none" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars fa-2x pt-3 px-1"></i></a>
+					</div>-->
+					<ul class="col-4 text-right faw-icons">
+						<li title="My Account" class="nav-item dropdown dropleft">
+							<a href="#" class="nav-link dropdown-toggle"  data-offset="20"  id="utilitynavbarDropdown" role="button" data-toggle="dropdown" aria-label="My Account - Not signed in" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user ml-1"></i></a>
+							<div class="dropdown-menu" aria-labelledby="utilitynavbarDropdown">
+								<a class="dropdown-item" href="#">My Account</a>
+								<a class="dropdown-item" href="#">Sign Out</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:void(0);" title="Toggle Menu" class="d-lg-none d-xl-none" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<i class="fas fa-bars"></i>
+							</a>
+						</li>
+					</ul>
+                </div>
+            </div>
+        </div>
+        <!-- Begin Navigation Bar -->
+		<nav class="navbar navbar-expand-lg" role="navigation">
+		  <div class="container">  
+			<div class="col-12 zeropad">
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">	
+				  	<li class="nav-item active"> <a class="nav-link" href="#" aria-label="Home"><i class="fas fa-home d-none d-lg-inline"></i> <span class="d-lg-none">Home</span></a> </li>
+				  	<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Customers &amp; Affiliates</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Customer Lookup</a> 
+							<a class="dropdown-item" href="#">Affiliate Accounts</a> 
+						</div>
+				  	</li>
+					<li class="nav-item active"> <a class="nav-link" href="#"> Discounts</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+							<a class="dropdown-item" href="#">Monthly Order Report</a> 
+							<a class="dropdown-item" href="#">Web Order Report</a> 
+						</div>
+				  	</li>
+				</ul>
+				</div>
+			  </div>
+			</div>
+		</nav>
+	</header>
+    <main id="content" role="main" class="clu">
+		<div class="container">
+			<section class="dms-heading">
+				<div class="row">
+					<div class="col-12">
+						<h1>PRODUCT HELPER</h1>
+					</div>
+				</div>
+			</section>
+			<style>
+				body        {overflow-y:scroll}
+				header.site a.dropdown-item  {font-size:.9em}
+				label 		{margin-top:5px; font-weight:bold}
+				table       {border:1px solid #ccc}
+				thead       {margin-top:-2px}
+				tbody       {}
+				td,th       {vertical-align:top}
+				th          {white-space: nowrap; padding:5px 10px; text-align:left!important; background-color:#dedede; border:1px solid #ccc; border-bottom:2px solid #6d9de2; position: sticky; top:-1px}
+				td          {padding:5px 10px; border:1px solid #ccc; white-space: nowrap}
+				.alt		{background-color:#EEE}
+				
+				tr.item th	{background-color:#0955a8; color:#fff}
+				h2 .cust-id {font-size:.7em; color:#696969}
+				.lookup td a {font-weight:bold; text-decoration: underline}
+				main.clu {min-height:400px}
+				.modal-body .description h4 {font-size:1.4em}
+				.profile {background-color:#DAEBFC; border:1px dotted #999}
+				@media (min-width: 576px) {
+						.modal-dialog {
+							max-width: 900px;
+							margin: 1.75rem auto;
+						}
+				}
+				
+/* New for product lookup */
+
+                .badge {margin:0; padding:0; font-weight:normal}
+                h2 {font-size:1.8em; margin:0 0 20px}
+                h2 span.subtitle {
+                    display:block;
+                    font-size:.7em; 
+                    color:#696969;
+                    margin-top:3px
+                }
+                b[title] {border-bottom:1px dashed #999; cursor:help}
+                .prod-details {border:1px solid #ccc; border-top:0}
+                .prod-details:first-of-type {border:1px solid #ccc}
+                .prod-details a {text-decoration:none}
+                .prod-details a h3 {border:1px solid #fff}
+                .prod-details a[class=""] h3 {border-bottom:1px solid #ccc; background-color:#eee}
+                .prod-details a[class=""] h3::after {content: " (close)"; color:#333; font-size:12px; font-weight:normal; margin-left:10px}
+                .prod-details a h3 {font-size:1.4em}
+                .prod-details a h3:hover {background-color:#fafafa}
+                .prod-details h3 {margin:0; padding:15px}
+                h4 {font-size:1.3em; padding:20px 0 0px; font-weight:bold}
+                .multi-collapse {margin:15px 15px 30px}
+                .lookup tbody tr.click:hover, .lookup tr.click:focus {background-color:#0955a8; color:#fff}
+                .lookup tbody tr.click:hover td, .lookup tr.click:focus td {color:#fff!important}
+                .prod-details .resize {overflow:auto; resize:both}
+                .pagination {padding-left:8px}
+                
+/* end New for product lookup */
+                
+				
+			</style>
+			<section>
+				<div class="row">
+					<div class="col-12 mt-3">
+						<div class="row">
+							<div class="col-12 text-center">
+								<div class="input-group mx-auto" style="max-width:600px">
+									<label class="sr-only">Product ISBN, SKU or Title</label>
+									<input class="form-control" type="input" id="lname" placeholder="Product ISBN, SKU or Title">
+									<div class="input-group-append">
+										<a href="#" type="submit" class="btn btn-primary px-3">Go</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<hr style="border-color:#fff" />
+					</div>
+				</div>
+			</section>
+			<section>
+                <div style="overflow:auto; resize:both">
+                    <table class="lookup" width="100%" align="center">
+                        <thead>
+                            <tr>
+                                <th scope="col">Version Type</th>
+                                <th scope="col">ISBN</th>
+                                <th scope="col">SKU</th>
+                                <th scope="col">Edition</th>
+                                <th scope="col" width="50%">Title</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="click" style="cursor:pointer" tabindex="0" onkeyPress="location.href='dms-product-lookup-record.html'" onClick="location.href='dms-product-lookup-record.html'">
+                                <td>Hardback</td>
+                                <td>9781315000886</td>
+                                <td>YE32180</td>
+                                <td>1st Edition</td>
+                                <td>The Revolution in Strategic Affairs</td>
+                            </tr>
+                            <tr class="alt click" style="cursor:pointer" tabindex="0" onkeyPress="location.href='dms-product-lookup-record.html'" onClick="location.href='dms-product-lookup-record.html'">
+                                <td>Hardback</td>
+                                <td>9781315000886</td>
+                                <td>YE32180</td>
+                                <td>1st Edition</td>
+                                <td>The Revolution in Strategic Affairs</td>
+                            </tr>
+                            <tr class="click" style="cursor:pointer" tabindex="0" onkeyPress="location.href='dms-product-lookup-record.html'" onClick="location.href='dms-product-lookup-record.html'">
+                                <td>Hardback</td>
+                                <td>9781315000886</td>
+                                <td>YE32180</td>
+                                <td>1st Edition</td>
+                                <td>The Revolution in Strategic Affairs</td>
+                            </tr>
+                        </tbody>
+                    </table>	
+                </div>
+				
+				<div class="row">
+					<div class="col-12 d-flex pagination mt-3">
+						<nav class="d-block" aria-label="Promotions pagination bar">
+							<ul id="pagination2" class="pagination pagination-sm">
+								<li class="page-item active"><a href="javascript:void()" aria-label="Current Page" class="page-link">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">4</a></li>
+								<li class="page-item"><a class="page-link" href="#">5</a></li>
+								<li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+								<li class="page-item"><a class="page-link" href="#">»</a></li>
+								<li class="text-center py-1 px-3">1-15 of 500</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</section>
+		</div>
+    </main>
+	
+    <footer>
+	  <div class="top">
+		  <div class="container">
+			  <a href="#top">Back to top <i class="fas fa-angle-up"></i></a>
+		  </div>
+	  </div>
+
+      <div id="footerlogos">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6 centers">
+					<img src="https://www.routledge.com/images/routledge-crc-press-logo-white.png" alt="Routledge &amp; CRC Press Logo - Taylor &amp; Francis Group" />
+				</div>
+				<div class="col-12 col-md-6 text-right centers">
+					<hr class="d-block d-md-none">
+					<img src="https://www.routledge.com/images/taylor-and-francis-logo-w.png" alt="Taylor &amp; Francis Logo - an informa business">
+				</div>
+			</div>
+			<div class="row copyr">
+				<div class="col-12">
+					© <span id="copyrightyear">2020</span> Informa UK Limited, an Informa Plc company
+				</div>
+			</div>
+		</div>
+	  </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Routledge and CRC Press - Discount Management System Dashboard</title>
+	<meta name="Description" content="Routledge and CRC Press Discount Management System">
+	  
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<link href="https://www.routledge.com/css/ubw.css" rel="stylesheet">
+	<!-- Additional DMS Specific Styles -->
+	<link href="css/dms.css" rel="stylesheet">
+
+    <!-- Font Awesome plus script for FA5 kit -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/56b5410b09.js"></script>
+
+    <!-- Google web fonts -->
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+	<link href="//fonts.googleapis.com/css?family=Droid+Serif:400" rel="stylesheet">
+	  
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+  </head>
+  <body id="top">
+	<header class="site">
+        <div id="headerlogos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8" id="eat" style="padding:3px 10px">
+                        <i class="fas fa-paw fa-2x initials align-middle mr-2"><div id="eat-logo"><span style="font-size:15px">eCAT</span></div></i>
+						<span class="d-none d-sm-inline">eCommerce</span> Admin Tool
+                    </div>
+					<!--<div class="col-4 text-right">
+						<a title="Sign Out" href="#" class="p-1 d-none d-lg-inline"><i class="fas fa-sign-out-alt fa-2x pt-3 px-1"></i></a>
+						<a href="javascript:void(0);" title="Toggle Menu" class="d-lg-none d-xl-none" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars fa-2x pt-3 px-1"></i></a>
+					</div>-->
+					<ul class="col-4 text-right faw-icons">
+						<li title="My Account" class="nav-item dropdown dropleft">
+							<a href="#" class="nav-link dropdown-toggle"  data-offset="20"  id="utilitynavbarDropdown" role="button" data-toggle="dropdown" aria-label="My Account - Not signed in" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user ml-1"></i></a>
+							<div class="dropdown-menu" aria-labelledby="utilitynavbarDropdown">
+								<a class="dropdown-item" href="#">My Account</a>
+								<a class="dropdown-item" href="#">Sign Out</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:void(0);" title="Toggle Menu" class="d-lg-none d-xl-none" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<i class="fas fa-bars"></i>
+							</a>
+						</li>
+					</ul>
+                </div>
+            </div>
+        </div>
+        <!-- Begin Navigation Bar -->
+		<nav class="navbar navbar-expand-lg" role="navigation">
+		  <div class="container">  
+			<div class="col-12 zeropad">
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">	
+				  	<li class="nav-item active"> <a class="nav-link" href="#" aria-label="Home"><i class="fas fa-home d-none d-lg-inline"></i> <span class="d-lg-none">Home</span></a> </li>
+				  	<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Customers & Affiliates</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Customer Lookup</a> 
+							<a class="dropdown-item" href="#">Affiliate Accounts</a> 
+						</div>
+				  	</li>
+					<li class="nav-item active"> <a class="nav-link" href="#"> Discounts</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+							<a class="dropdown-item" href="#">Monthly Order Report</a> 
+							<a class="dropdown-item" href="#">Web Order Report</a> 
+						</div>
+				  	</li>
+				</ul>
+				</div>
+			  </div>
+			</div>
+		</nav>
+	</header>
+    <main id="content" role="main" class="clu">
+		<div class="container">
+			<section class="dms-heading">
+				<div class="row">
+					<div class="col-12">
+						<h1>PRODUCT HELPER</h1>
+					</div>
+				</div>
+			</section>
+			<style>
+				body        {overflow-y:scroll}
+				header.site a.dropdown-item  {font-size:.9em}
+				label 		{margin-top:5px; font-weight:bold}
+				
+				table       {border:1px solid #ccc}
+				thead       {margin-top:-2px}
+				tbody       {}
+				td,th       {vertical-align:top}
+				th          {white-space: nowrap; padding:5px 10px; text-align:left!important; background-color:#dedede; border:1px solid #ccc; border-bottom:2px solid #6d9de2; position: sticky; top:-1px}
+				td          {padding:5px 10px; border:1px solid #ccc; white-space: nowrap}
+				.alt		{background-color:#EEE}
+				
+				tr.item th	{background-color:#0955a8; color:#fff}
+				
+				h2 .cust-id {font-size:.7em; color:#696969}
+				
+				.lookup td a {font-weight:bold; text-decoration: underline}
+				main.clu {min-height:400px}
+				
+				.modal-body .description h4 {font-size:1.4em}
+				
+				.profile {background-color:#DAEBFC; border:1px dotted #999}
+				
+				@media (min-width: 576px) {
+						.modal-dialog {
+							max-width: 900px;
+							margin: 1.75rem auto;
+						}
+				}
+				
+				
+  /* New for Product Lookup */
+                .badge {margin:0; padding:0; font-weight:normal}
+                h2 {font-size:1.8em; margin:0 0 20px}
+                h2 span.subtitle {
+                    display:block;
+                    font-size:.7em; 
+                    color:#696969;
+                    margin-top:3px
+                }
+                h3 {font-size:1.3em; padding:0 0 5px 0; margin:0}
+                b[title] {border-bottom:1px dashed #999; cursor:help}
+                .prod-details {border:1px solid #ccc; border-top:0}
+                .prod-details:first-of-type {border:1px solid #ccc}
+                .prod-details a {text-decoration:none}
+                .prod-details a h3 {border:1px solid #fff}
+                .prod-details a[class=""] h3 {border-bottom:1px solid #ccc; background-color:aliceblue}
+                .prod-details a[class=""] h3::after {content: " (close)"; color:#333; font-size:12px; font-weight:normal; margin-left:10px}
+                .prod-details a h3 {font-size:1.4em}
+                .prod-details a h3:hover {background-color:aliceblue}
+                .prod-details h3 {margin:0; padding:15px}
+                h4 {font-size:1.3em; padding:20px 0 10px; font-weight:bold}
+                .multi-collapse {margin:10px 30px 30px}
+                .lookup tbody tr.click:hover, .lookup tr.click:focus {background-color:#0955a8; color:#fff}
+                .lookup tbody tr.click:hover td, .lookup tr.click:focus td {color:#fff!important}
+                .prod-details .resize {overflow:auto; resize:both}
+                .databox {padding:20px; background-color:#fff; border:1px solid #ccc; box-shadow: 5px 5px 3px #999}
+                
+/* End New for Product Lookup */           
+				
+				
+				
+			</style>
+			<section>
+				<div class="row mt-3">
+					<div class="col-12 col-md-2 py-2">
+						<a title="Back to previous results" href="dms-product-lookup.html">&laquo; Back to List</a>
+					</div>
+					<div class="col-12 col-md-8 text-center">
+						<div class="input-group mx-auto" style="max-width:600px">
+							<label class="sr-only">Product ISBN, SKU or Title</label>
+							<input class="form-control" type="input" id="lname" placeholder="Product ISBN, SKU or Title">
+							<div class="input-group-append">
+								<a href="#" type="submit" class="btn btn-primary px-3 py-1">Go</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<hr style="border-color:#fff" />
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="row">
+					<div class="col-12">
+						<div class="p-3 profile">
+							<div class="row">
+								<div class="col-12 col-lg-8">
+                                    <div class="databox">
+                                        <div class="badge">1st Editon</div>
+                                        <h2 class="mb-2">The Student Motivation Handbook 
+                                            <span class="subtitle">50 Ways to Boost an Intrinsic Desire to Learn</span></h2>
+ 
+                                        <hr />
+                                        <p><b title="Version Type">Paperback  PAPE  19</b> | <b title="ISBN">9781138631519</b> | <b title="ISBN10">1138631515</b> |  <b title="SKU">Y322615</b>  |  <a  data-toggle="modal" data-target="#rModal" href="#" class="text-danger"><i class="fas fa-exclamation-circle"></i> Restricted</a></p>
+                                        
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="rModal" tabindex="-1" aria-labelledby="rModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <h5 class="modal-title" id="rModalLabel">Restricted Product</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>
+                                              <div class="modal-body">
+                                                This product is restricted for the following reasons:
+                                                  <ul>
+                                                      <li>OOP</li>
+                                                  </ul>
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        
+                                        
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6">
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">GT Update</div>
+                                                    <div class="col-6">Jun 9, 2023</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Pub Date</div>
+                                                    <div class="col-6">Mar 30, 2023</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Planned Pub Date</div>
+                                                    <div class="col-6">Mar 30, 2023</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Actual Pub Date</div>
+                                                    <div class="col-6">-</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Copyright</div>
+                                                    <div class="col-6">2023</div>
+                                                </div>
+                                                
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Previous ISBN</div>
+                                                    <div class="col-6">-</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">GT Product ID</div>
+                                                    <div class="col-6">-</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Title ID</div>
+                                                    <div class="col-6">346166</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Edition ID</div>
+                                                    <div class="col-6">552948</div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Pages</div>
+                                                    <div class="col-6">196</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Color Illustrations</div>
+                                                    <div class="col-6">16</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">B/W Illustrations</div>
+                                                    <div class="col-6">0</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Dimensions UK</div>
+                                                    <div class="col-6">-</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Dimenstions US</div>
+                                                    <div class="col-6">-</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Tables B/W</div>
+                                                    <div class="col-6">-</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Tables Color</div>
+                                                    <div class="col-6">-</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Line Art B/W</div>
+                                                    <div class="col-6">-</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 font-weight-bold">Line Art Color</div>
+                                                    <div class="col-6">-</div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="databox mt-3">
+                                        <div class="row">
+                                            <div class="col-12"><h3>Distribution Center Pub Dates</h3></div>
+                                            <div class="col-4">
+                                                <div class="px-3"><label>USD <span class="font-weight-normal small">(primary)</span></label>
+                                                    <br /><span class="d-inline-block" style="width:90px">Planned</span> Mar 30, 2023
+                                                    <br /><span class="d-inline-block" style="width:90px">Actual</span> Mar 30, 2023
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="px-3"><label>GBP</label>
+                                                    <br /><span class="d-inline-block" style="width:90px">Planned</span> Mar 30, 2023
+                                                    <br /><span class="d-inline-block" style="width:90px">Actual</span> Mar 30, 2023
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="px-3"><label>AUD/NZD</label>
+                                                    <br /><span class="d-inline-block" style="width:90px">Planned</span> Mar 30, 2023
+                                                    <br /><span class="d-inline-block" style="width:90px">Actual</span> Mar 30, 2023
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+								</div>
+                                <div class="col-12 col-lg-4 mt-3 mt-lg-0">
+                                    <div class="databox">
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Imprint</div>
+                                            <div class="col-6">Routledge  IMPR  31</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Publisher</div>
+                                            <div class="col-6">Behavioural Science &amp; Education  BSCIED  67</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Ownership</div>
+                                            <div class="col-6">US</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Group of Company</div>
+                                            <div class="col-6">OBB</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Division</div>
+                                            <div class="col-6">EDUSP</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Project Number</div>
+                                            <div class="col-6">-</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">ID</div>
+                                            <div class="col-6">582483</div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Binding Style</div>
+                                            <div class="col-6">Limp  PBK  26</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Subgroup</div>
+                                            <div class="col-6">Professional (DRM-Free)  150  7</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Number of Volumes</div>
+                                            <div class="col-6">-</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Home Discount Code</div>
+                                            <div class="col-6">O</div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Is Best Seller</div>
+                                            <div class="col-6">False</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Credit Note Hold</div>
+                                            <div class="col-6">-</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Distribution Hold</div>
+                                            <div class="col-6">-</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Inspection Copy Available</div>
+                                            <div class="col-6">-</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Subscription</div>
+                                            <div class="col-6">False</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">Sales Eval</div>
+                                            <div class="col-6">-</div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-6 font-weight-bold">DOI Status</div>
+                                            <div class="col-6">Draft</div>
+                                        </div> 
+                                        <div class="row">
+                                            <div class="col-12 font-weight-bold">DOI</div>
+                                            <div class="col-12"><a href="http://dx.doi.org/10.1093/ajae/aaq063" target="_blank">http://dx.doi.org/10.1093/ajae/aaq063</a></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+						</div>
+						
+					</div>
+				</div>
+
+			</section>
+            
+            <section class="mt-4">
+            
+                <div class="prod-details">
+					<a data-toggle="collapse" href="#multiCollapseExample0" role="button" aria-expanded="false" aria-controls="multiCollapseExample0">
+						<h3>Blurbs &amp; Metadata</h3>
+					</a>
+					<div class="collapse multi-collapse" id="multiCollapseExample0">
+                        <div class="ph-metatags">
+				            <h4>Metatags</h4>
+                            <p>
+                            Inductive Teaching Method Multiple Reading Strategies Extra Credit Option Emotional Exhaustion Genius Hours Fun Game English Language Learners Intrinsic Motivation 
+                                Strategies Positive Teacher Student Relationships Anonymous Student Evaluations Support English Language Learners White Space Activating Background Knowledge 
+                                Ell Student Growth Mindset Struggle Stories Problem Based Learning LTELLs Connection Circles Free Voluntary Reading Student Engagement Build Connections Choice 
+                                Boards Concept Attainment Intrinsic Motivation
+                            </p>
+						</div>
+                        <div class="ph-description">
+				            <h4>Description</h4>
+                          <p>&lt;P&gt;Even with the highest-quality content, students who don’t have an intrinsic motivation to learn may never perform to their full potential. So how can we create the 
+                              classroom conditions where that motivation can flourish? Renowned educator Larry Ferlazzo has the answers in this comprehensive new resource.&lt;/P&gt; &lt;P&gt;Designed 
+                              as a practical handbook you can easily refer to again and again for ideas, the book offers 50 teaching practices divided into four main sections: autonomy, competency, 
+                              relatedness, and relevance. Throughout, there are tip boxes with links to resources for additional support, as well as lists of questions you can ask yourself to ensure 
+                              you’re implementing the strategies in a culturally responsive way.&lt;/P&gt; &lt;P&gt;With this book as your compass, you’ll be able to create the conditions for students 
+                              to find their inner motivation, be their true selves, and thrive in school and beyond.&lt;/P&gt; 
+                          </p>
+						</div>
+                        <div class="ph-features">
+				            <h4>Features</h4>
+                          <p> -
+                          </p>
+						</div>
+                        <div class="ph-reviews">
+				            <h4>Table of Contents</h4>
+                          <p> -
+                          </p>
+						</div>
+                        <div class="ph-reviews">
+				            <h4>Reviews</h4>
+                          <p> -
+                          </p>
+						</div>
+                        <div class="ph-reviews">
+				            <h4>Reviews for Export</h4>
+                          <p> -
+                          </p>
+						</div>
+                        <div class="ph-reviews">
+				            <h4>Seasonal Blurb</h4>
+                          <p> -
+                          </p>
+						</div>
+                        <div class="ph-reviews">
+				            <h4>Short Blurb</h4>
+                          <p> -
+                          </p>
+						</div>
+                        <div class="ph-reviews">
+				            <h4>Additional Blurb</h4>
+                          <p> -
+                          </p>
+						</div>
+                        <div class="ph-reviews">
+				            <h4>Author Blurb</h4>
+                          <p> -
+                          </p>
+						</div>
+
+					</div>
+				</div>
+
+                <div class="prod-details">
+					<a data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+						<h3>Categories &amp; Classifications</h3>
+					</a>
+					<div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <h4>Categories</h4>
+						<div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Code</th>
+                                        <th>Title</th>
+                                        <th>Parent ID</th>
+                                        <th>Parent Code</th>
+                                        <th>Parent Title</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>4154</td>
+                                        <td>SCED</td>
+                                        <td>Education</td>
+                                        <td>7458</td>
+                                        <td>SC</td>
+                                        <td>Subject Code</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>4155</td>
+                                        <td>SCED09</td>
+                                        <td>Classroom Practice</td>
+                                        <td>4154</td>
+                                        <td>SCED</td>
+                                        <td>Education</td>
+                                    </tr>									
+                                </tbody>
+                            </table>	
+						</div>
+                        <h4>VSINV SET ISBN</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ISBN</th>
+                                        <th>Code</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>								
+                                </tbody>
+                            </table>	
+						</div>
+                         <h4>Classifications</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Priority</th>
+                                        <th>Level</th>
+                                        <th>Sequence</th>
+                                        <th>Fixed</th>
+                                        <th>Variable</th>
+                                        <th>Code</th>
+                                        <th>Text</th>
+                                        <th>Value</th>
+                                        <th>String Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>430284340</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>75</td>
+                                        <td>-</td>
+                                        <td>CT</td>
+                                        <td>CT</td>
+                                        <td>Channel Type</td>
+                                        <td>PROF</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>420508137</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1155</td>
+                                        <td>CTM</td>
+                                        <td>RFM</td>
+                                        <td>CTMRFM</td>
+                                        <td>Ready For Market</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>									
+                                </tbody>
+                            </table>	
+						</div>
+					</div>
+				</div>
+
+<!-- Hidden - No longer needed
+                <div class="prod-details">
+					<a data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+						<h3>Downloads (IS THIS NEEDED?)</h3>
+					</a>
+					<div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Subtitle</th>
+                                        <th>Platform</th>
+                                        <th>Filename</th>
+                                        <th>Instruction</th>
+                                        <th>Last Update</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>								
+                                </tbody>
+                            </table>	
+						</div>
+					</div>
+				</div>
+-->
+                <div class="prod-details">
+					<a data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">
+						<h3>Imprint &amp; Publisher</h3>
+					</a>
+					<div class="collapse multi-collapse" id="multiCollapseExample3">
+                        
+                        <h4>Imprint &amp; Publisher</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Code</th>
+                                        <th>Description</th>
+                                        <th>Image</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>								
+                                </tbody>
+                            </table>	
+						</div>
+                        
+                        <h4>Applications</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Category Code</th>
+                                        <th>Category Title</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>								
+                                </tbody>
+                            </table>	
+						</div>
+					</div>
+				</div>
+                
+                <div class="prod-details">
+					<a data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">
+						<h3>Inventory Status</h3>
+					</a>
+					<div class="collapse multi-collapse" id="multiCollapseExample4">
+                        
+                        <h4>Inventory Status</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Distribution Center ID</th>
+                                        <th>Distribution Center Code</th>
+                                        <th>Distribution Center</th>
+                                        <th>Inventory Status Code</th>
+                                        <th>Inventory Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+						</div>
+                        
+                        <h4>VitalSource Inventory</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ISBN</th>
+                                        <th>Print</th>
+                                        <th>Title</th>
+                                        <th>Last Update</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+						</div>
+					</div>
+				</div>
+
+                <div class="prod-details">
+					<a data-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false" aria-controls="multiCollapseExample5">
+						<h3>Originators</h3>
+					</a>
+					<div class="collapse multi-collapse" id="multiCollapseExample5">
+                        <div class="resize">
+                            <table class="lookup mt-3" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Order</th>
+                                        <th>Last</th>
+                                        <th>First</th>
+                                        <th>Credentials</th>
+                                        <th>Affiliation</th>
+                                        <th>Biography</th>
+                                        <th>Salutation</th>
+                                        <th>Role</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+						</div>
+					</div>
+				</div>
+                
+                <div class="prod-details">
+					<a data-toggle="collapse" href="#multiCollapseExample6" role="button" aria-expanded="false" aria-controls="multiCollapseExample6">
+						<h3>Pricing &amp; Discounts</h3>
+					</a>
+					<div class="collapse multi-collapse" id="multiCollapseExample6">
+                        
+                        <h4>Pricing</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Effective</th>
+                                        <th>Expire</th>
+                                        <th>Type ID</th>
+                                        <th>Type</th>
+                                        <th>List</th>
+                                        <th>Real</th>
+                                        <th>ISO</th>
+                                        <th>Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+						</div>
+                        
+                        <h4>Discounts</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Application</th>
+                                        <th>Code</th>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Effective</th>
+                                        <th>Expire</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+						</div>
+					</div>
+				</div>
+                
+                <div class="prod-details">
+					<a data-toggle="collapse" href="#multiCollapseExample7" role="button" aria-expanded="false" aria-controls="multiCollapseExample7">
+						<h3>Series &amp; Bindings</h3>
+					</a>
+					<div class="collapse multi-collapse" id="multiCollapseExample7">
+                        <h4>Series</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Code</th>
+                                        <th>Subtitle</th>
+                                        <th>Description</th>
+                                        <th>Text</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+						</div>
+                        <h4>Version Type</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Code</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+						</div>
+                        <h4>Binding Style</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Code</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+						</div>
+                        
+                        <h4>Related Bindings</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>SKU</th>
+                                        <th>ISBN</th>
+                                        <th>Version Type</th>
+                                        <th>Binding Style</th>
+                                        <th>Title</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="click" style="cursor:pointer" tabindex="0" onkeyPress="location.href='dms-product-lookup-record.html'" onClick="location.href='dms-product-lookup-record.html'">
+                                        <td style="text-decoration: underline; font-weight:bold; color:#0955A8">0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                    <tr class="alt click" style="cursor:pointer" tabindex="0" onkeyPress="location.href='dms-product-lookup-record.html'" onClick="location.href='dms-product-lookup-record.html'">
+                                        <td style="text-decoration: underline; font-weight:bold; color:#0955A8">0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+						</div>
+                        
+                        <h4>Related Titles</h4>
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>SKU</th>
+                                        <th>ISBN</th>
+                                        <th>Version Type</th>
+                                        <th>Title</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                        <td>0000000000000</td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+						</div>
+                        
+					</div>
+				</div>
+                
+<!-- Hidden - no longer needed     
+                <div class="prod-details">
+					<a data-toggle="collapse" href="#multiCollapseExample8" role="button" aria-expanded="false" aria-controls="multiCollapseExample8">
+						<h3>Product Resources (IS THIS NEEDED?)</h3>
+					</a>
+					<div class="collapse multi-collapse" id="multiCollapseExample8">
+                        <div class="resize">
+                            <table class="lookup" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Order</th>
+                                        <th>Last</th>
+                                        <th>First</th>
+                                        <th>Credentials</th>
+                                        <th>Affiliation</th>
+                                        <th>Biography</th>
+                                        <th>Salutation</th>
+                                        <th>Role</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr class="alt">
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+						</div>
+					</div>
+				</div>
+-->
+                
+            </section>
+
+		</div>
+    </main>
+
+    <footer>
+		<div class="top">
+		  	<div class="container">
+			  	<a href="#top">Back to top <i class="fas fa-angle-up"></i></a>
+		  	</div>
+		</div>
+		<div id="footerlogos">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-6 centers">
+						<img src="https://www.routledge.com/images/routledge-crc-press-logo-white.png" alt="Routledge &amp; CRC Press Logo - Taylor &amp; Francis Group" />
+					</div>
+					<div class="col-12 col-md-6 text-right centers">
+						<hr class="d-block d-md-none">
+						<img src="https://www.routledge.com/images/taylor-and-francis-logo-w.png" alt="Taylor &amp; Francis Logo - an informa business">
+					</div>
+				</div>
+				<div class="row copyr">
+					<div class="col-12">
+						© <span id="copyrightyear">2020</span> Informa UK Limited, an Informa Plc company
+					</div>
+				</div>
+			</div>
+		</div>
+    </footer>
+		
+	<div class="modal fade" id="vsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+		`		<div class="modal-header pt-0">
+					<h4 class="modal-title" id="myModalLabel">Invoice #123467</h4>
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				</div>
+				<div class="modal-body">
+
+					<form class="boxed">
+						<div class="row mx-0 border border-secondary" style="background-color:#eee">
+							<div class="col-6 col-lg-4 pb-3">
+								<h3>Billing <span class="d-none d-sm-inline d-lg-none d-xl-inline">Address</span></h3>
+								Mack Donald
+								<br>500 Carolina Blvd
+								<br>Myrtle Beach, SC
+								<br>29579
+								<br>US
+								<br>(716) 555-1212
+							</div>
+							<div class="col-6 col-lg-4 pb-3">
+								<h3>Shipping <span class="d-none d-sm-inline d-lg-none d-xl-inline">Address</span></h3>
+								Mack Donald
+								<br>500 Carolina Blvd
+								<br>Myrtle Beach, SC
+								<br>29579
+								<br>US
+								<br>(716) 555-1212
+							</div>
+							<div class="col-12 col-lg-4 pb-3">
+								<div class="row">
+									<div class="col-6 col-lg-12">
+										<h3>Payment</h3>
+										<p>Visa **** **** **** 8128</p>
+									</div>
+									<div class="col-6 col-lg-12">
+										<h3>Delivery</h3>
+										<p>FREE! Standard Shipping - USPS (*3-7 days)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr class="hr-ccc" />
+						<div class="row citem">
+							<div class="col-3 col-md-2 mx-auto">
+								<a href="/World-Folklore-for-Storytellers-Tales-of-Wonder-Wisdom-Fools-and-Heroes/Sherman/p/book/9780765681744" title="World Folklore for Storytellers: Tales of Wonder, Wisdom, Fools, and Heroes">
+								<img data-prodid="417056" data-productisbn="9780765681744" data-size="crclarge" class="img-fluid product-cover-img" alt="World Folklore for Storytellers: Tales of Wonder, Wisdom, Fools, and Heroes  - 1st Edition book cover " src="https://images.routledge.com/common/jackets/crclarge/978076568/9780765681744.jpg" onerror="this.src='/img/covers/notavail-big.png'" data-holder-rendered="true" data-pagespeed-url-hash="1583539840" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+								</a>
+							</div>
+							<div class="col-9 col-md-10 pl-0 pl-md-3">							
+								<div class="row">
+									<div class="col-12 col-md-9">
+										<div class="description">
+											<div class="badge">
+												1st Edition
+											</div>
+											<a href="https://www.routledge.com/9780765681744" target="_blank">
+												<h4>World Folklore for Storytellers: Tales of Wonder, Wisdom, Fools, and Heroes</h4>
+											</a>
+											<span>
+												By Howard J Sherman<br />
+												eBook - ISBN 9780765681744<br />
+												December 15, 2009 by Routledge<br />
+												400 Pages<br />
+												
+												VitalSource Code: 7TF443XM5JJC5B7TJ8FA<br />Status: <span class="font-weight-bold text-danger">Revoked</span><br /><a class="btn btn-sm btn-danger mt-2" href="javascript:confirm('Press OK to revoke this ebook. This action cannot be undone.')">Revoke eBook</a><br />
+											</span>
+										</div>
+									</div>
+									<div class="col-12 col-md-3 text-right mt-2 mt-md-0">
+										<div class="row">
+											<div class="col-6 col-md-12 text-left text-md-right">
+												Qty: 1
+											</div>
+											<div class="col-6 col-md-12 text-right">
+												<div class="cost mt-0 mt-md-1"><strong>$2,999.95</strong></div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<hr class="hr-ccc" />
+						<div class="row citem">
+							<div class="col-3 col-md-2 mx-auto">
+								<a href="/World-Folklore-for-Storytellers-Tales-of-Wonder-Wisdom-Fools-and-Heroes/Sherman/p/book/9780765681744" title="World Folklore for Storytellers: Tales of Wonder, Wisdom, Fools, and Heroes">
+								<img data-prodid="417056" data-productisbn="9780765681744" data-size="crclarge" class="img-fluid product-cover-img" alt="World Folklore for Storytellers: Tales of Wonder, Wisdom, Fools, and Heroes  - 1st Edition book cover " src="https://images.routledge.com/common/jackets/crclarge/978076568/9780765681744.jpg" onerror="this.src='/img/covers/notavail-big.png'" data-holder-rendered="true" data-pagespeed-url-hash="1583539840" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+								</a>
+							</div>
+							<div class="col-9 col-md-10 pl-0 pl-md-3">							
+								<div class="row">
+									<div class="col-12 col-md-9">
+										<div class="description">
+											<div class="badge">
+												1st Edition
+											</div>
+											<a href="https://www.routledge.com/9780765681744" target="_blank">
+												<h4>World Folklore for Storytellers: Tales of Wonder, Wisdom, Fools, and Heroes</h4>
+											</a>
+											<span>
+												By Howard J Sherman<br />
+												Hardback - ISBN 9780765681744<br />
+												December 15, 2009 by Routledge<br />
+												400 Pages
+											</span>
+										</div>
+									</div>
+									<div class="col-12 col-md-3 text-right mt-2 mt-md-0">
+										<div class="row">
+											<div class="col-6 col-md-12 text-left text-md-right">
+												Qty: 5
+												<div class="promo text-success text-left text-md-right">Promo 12345</div>
+											</div>
+											<div class="col-6 col-md-12 text-right">
+												<div class="oldcost">$2,999.95 each</div>
+												<div class="save">$1,499.97 each</div>
+												<div class="cost"><strong>$7,499.85</strong></div>
+												<div>Saved $7,499.90</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<hr class="hr-ccc" />
+						<div class="row">
+							<div class="col-9 text-right font-weight-bold">
+								Subtotal:<br />
+							</div>
+							<div class="col-3 text-right">
+								$100.00
+							</div>
+							<div class="col-9 text-right font-weight-bold">
+								Tax:<br />
+							</div>
+							<div class="col-3 text-right">
+								$100.00
+							</div>
+							<div class="col-9 text-right font-weight-bold">
+								Shipping:<br />
+							</div>
+							<div class="col-3 text-right">
+								$100.00
+							</div>
+							<div class="col-9 text-right font-weight-bold">
+								Shipping Tax:<br />
+							</div>
+							<div class="col-3 text-right">
+								$100.00
+							</div>
+							<div class="col-12">
+								<hr />
+							</div>
+							<div class="col-9 text-right font-weight-bold">
+								Total:<br />
+							</div>
+							<div class="col-3 text-right font-weight-bold">
+								$100.00
+							</div>
+							<div class="col-9 text-right font-weight-bold" style="color:#c91f24">
+								Saved:<br />
+							</div>
+							<div class="col-3 text-right" style="color:#c91f24">
+								$100.00
+							</div>
+
+						</div>
+					</form>	
+
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+  	</body>
+</html>
